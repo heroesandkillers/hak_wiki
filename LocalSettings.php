@@ -49,11 +49,17 @@ $wgEnotifWatchlist = false; # UPO
 $wgEmailAuthentication = true;
 
 ## Database settings
+require (('credentials.php') or die("credentials.php NOT FOUND"));
+//$wgDBname;
+//$wgDBuser;
+//$wgDBpassword;
+//$wgSecretKey;
+//$wgUpgradeKey;
+//$wgSharedDB
+//$wgSharedPrefix
+
 $wgDBtype = "mysql";
 $wgDBserver = "localhost";
-$wgDBname = "hak";
-$wgDBuser = "hak";
-$wgDBpassword = "&MOVy1PV";
 
 # MySQL table options to use during installation or update
 $wgDBTableOptions = "ENGINE=MyISAM, DEFAULT CHARSET=utf8";
@@ -72,12 +78,6 @@ $wgEnableUploads = false;
 #$wgImageMagickConvertCommand = "/usr/bin/convert";
 # InstantCommons allows wiki to use images from http://commons.wikimedia.org
 $wgUseInstantCommons = false;
-
-$wgSecretKey = "a5f6de4b0c435c5dabd578f7aa768ad8324713a4b638e32eff2ff77544e37908";
-
-# Site upgrade key. Must be set to a string (default provided) to turn on the
-# web installer while LocalSettings.php is in place
-$wgUpgradeKey = "efd4b1fadc1528ee1";
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'standard', 'nostalgia', 'cologneblue', 'monobook', 'vector':
@@ -106,9 +106,6 @@ $wgFavicon = "$wgScriptPath/iWiki.ico";
 
 $wgShowExceptionDetails = true;
 
-
-$wgSharedDB = 'hak'; # The $wgDBname for the wiki database holding the main user table
-$wgSharedPrefix = 'wiki_'; # The $wgDBprefix for the database. Defaults to the prefix of the current wiki if not specified
 //$wgCookieDomain = '.' . $hak_url; //También funciona pero me ha dado problemas!
 $wgCookieDomain = '.heroesandkillers.com';
 
